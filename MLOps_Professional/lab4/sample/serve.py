@@ -26,6 +26,23 @@ async def ping():
     """
     return {"message":"Server is Running"}
 
+@app.post("/train2")
+async def train(payload:TrainPayload):
+    """Training Endpoint
+    This endpoint process raw data and trains an XGBoost Classifier
+
+    Parameters
+    ----------
+    payload : TrainPayload
+        Training endpoint payload model
+
+    Returns
+    -------
+    dict
+        Accuracy metrics and other logger feedback on training progress.
+    """
+    model = 
+
 @app.post("/train")
 async def train(payload:TrainPayload):
     """Training Endpoint
